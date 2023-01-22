@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChunkLoadingError</title>
+    <link rel="prefetch" href="./bad_script2.js" as="script">
+</head>
+<body>
+<h1>ChunkLoadingError: Missing</h1>
+
+<script>
+    window.onerror = (...args) => console.log("window onerror", ...args);
+    window.addEventListener("error", error => console.log("error event", error));
+</script>
+</body>
+</html>
